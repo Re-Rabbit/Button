@@ -1,0 +1,27 @@
+/**
+ * Button.
+ */
+
+@require 'styles/reset'
+@require 'styles/test'
+
+
+btn-base()
+  reset-space()
+  reset-theme()
+  bd bdbox
+  dis ib
+  ta cen
+  va base
+  
+btn-space()
+  pad 0.5rem 0.8rem  
+
+btn-theme(c = #333, bgc = #eee)
+  cc c
+  bg bgc
+
+btn()
+  btn-base()
+  btn-space()
+  btn-theme()
