@@ -1,27 +1,47 @@
-/**
- * Button.
- */
+///
+/// Button Styles.
+///
 
 @require 'styles/reset'
-@require 'styles/test'
+@require "styles/util"
 
 
-btn-base()
+button-base()
   reset-space()
   reset-theme()
-  bd bdbox
+  reset-font()
+  box bdbox
   dis ib
   ta cen
   va base
-  
-btn-space()
+  cur ptr
+
+
+button-space()
   pad 0.5rem 0.8rem  
 
-btn-theme(c = #333, bgc = #eee)
+
+button-theme(c = #333, bgc = #eee)
   cc c
   bg bgc
 
-btn()
-  btn-base()
-  btn-space()
-  btn-theme()
+
+button-basic()
+  button-base()
+  button-space()
+  button-theme()
+
+  &:focus
+    outline 0
+
+
+/// Export
+
+button-basic-export($se = "button")
+  .{$se}
+    button-basic()
+
+
+/// Includes all the styles.
+
+@require "styles/*"    
